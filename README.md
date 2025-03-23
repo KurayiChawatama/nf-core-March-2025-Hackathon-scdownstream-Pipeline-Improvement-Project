@@ -36,7 +36,7 @@ We recommend the following workflow:
    - Create an isolated environment for modifying/testing dependencies.
    - Activate the environment before working.
 
-2. **Use Docker or Singularity for reproducible final validation**
+2. **Use Docker for reproducible final validation**
    - Once the pipeline is stable, switch to containers for robust testing.
 
 ---
@@ -119,6 +119,8 @@ tmux ls
 tmux kill-session -t rstudio_session
 ```
 
+---
+
 ## 👥 Project Contributors
 
 **Group Leaders**
@@ -132,9 +134,69 @@ Contributors of all experience levels are welcome! Whether you're comfortable wi
 
 ---
 
-## 🚀 Let’s Hack!
+## 🧩 Where to Start Today (Suggested First Steps)
+1. **Set up the Conda dev environment** (you already have the YAML).
+2. **Clone the repo and explore the pipeline structure**:
+   ```bash
+   git clone https://github.com/nf-core/scdownstream.git
+   cd scdownstream
+   ```
+3. **Pick a task based on your interest** (tool integration, species support, docs).
+4. **Check the open issues / discussions tab on the repo**, or create your own task if it’s not listed.
 
-This project is part of an **nf-core hackathon** focused on improving downstream single-cell RNA-seq analysis. We’re excited to build something impactful together. ✨
+---
 
-> 📢 Questions? Ideas? PRs? Issues? Dive in!
-> 
+## 🧠 List Of Tasks: Pick a Track
+
+Here’s a breakdown of **what you can do to contribute**, based on your interests and experience level:
+
+### 1. 🧪 **Tool Integration (e.g. scDblFinder)**
+**Great if you like R, pipeline logic, and Nextflow.**
+- [ ] Familiarize yourself with how `nf-core/scdownstream` currently handles doublet detection.
+- [ ] Fork the repo and clone it locally.
+- [ ] Add `scDblFinder` as a new doublet detection option:
+  - Add it as a **new module** (check [`nf-core/modules`](https://github.com/nf-core/modules)).
+  - Hook it into the pipeline config and `main.nf` logic.
+- [ ] Test the module locally with mock/test data.
+- [ ] Add an option in `params.schema.json` so users can select scDblFinder.
+
+📚 Reference:
+- [`nf-core/modules`](https://github.com/nf-core/modules)
+- [`nf-core/tools` guide](https://nf-co.re/developers/adding_tools)
+
+---
+
+### 2. 🐭 **Mouse Species Support**
+**Great if you're familiar with scRNA-seq or bioinformatics data formats.**
+- [ ] Check if `nf-core/scdownstream` currently hardcodes human genome references or assumptions.
+- [ ] Create/test a pipeline run using mouse data, e.g., from **Tabula Muris Senis**.
+- [ ] Note any species-specific adjustments (annotation formats, gene IDs, marker gene lists).
+- [ ] Suggest or implement generalizable species selection logic (e.g., via params).
+
+---
+
+### 3. 📖 **Improve Docs & Onboarding**
+**Perfect if you want to help others and like writing clear instructions.**
+- [ ] Walk through the current documentation from a new user's perspective.
+- [ ] Identify anything that’s missing, confusing, or out of date.
+- [ ] Add:
+  - A contributor quickstart guide.
+  - An example config for mouse data.
+  - Code comments in newly added modules.
+
+---
+
+### 4. 🧪 **Testing + Validation**
+**Ideal if you’re detail-oriented or new to contributing.**
+- [ ] Pull the current pipeline branch and test it with provided input data.
+- [ ] Try running `scDblFinder` manually in R on example datasets, compare it with the pipeline output.
+- [ ] Help improve or expand unit tests and CI workflows.
+
+---
+
+## 🧰 Tools You’ll Be Using
+- **Nextflow** for pipeline structure.
+- **R** (especially for scDblFinder and Seurat/SCE workflows).
+- **GitHub** for collaboration.
+- **Docker** for reproducibility.
+- **Markdown** for documentation.
