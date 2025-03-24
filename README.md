@@ -3,7 +3,12 @@
 Welcome to our nf-core hackathon March 2025 project! This repository contains collaborative work to **improve the [nf-core/scdownstream](https://github.com/nf-core/scdownstream) pipeline** by expanding tool diversity, improving support for model organisms, and enhancing user accessibility.
 
 ---
+## Important Note
 
+**This repo is for project coordination only!**
+
+🔧 **Code contributions happen here: [scdownstream fork](https://github.com/KurayiChawatama/scdownstream)**
+---
 ## 🎯 Project Goals
 
 1. **🔍 Doublet Detection**
