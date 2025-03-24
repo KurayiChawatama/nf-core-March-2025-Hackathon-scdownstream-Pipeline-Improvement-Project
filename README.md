@@ -64,13 +64,13 @@ dependencies:
   - r-base
   - r-devtools
   - r-optparse
+  - r-tidyverse
   - bioconductor-scdblfinder
   - bioconductor-singlecellexperiment
   - bioconductor-scran
   - r-seurat
-  - r-dplyr
-  - r-ggplot2
-  - r-data.table
+  - jupyterlab
+  - git
 ```
 
 Install via:
