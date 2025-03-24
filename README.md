@@ -205,3 +205,18 @@ Here’s a breakdown of **what you can do to contribute**, based on your interes
 - **GitHub** for collaboration.
 - **Docker** for reproducibility.
 - **Markdown** for documentation.
+
+# 🚀 Day 1 Report
+
+## ✅ What we got done!
+
+1. 🧐 Figured out how the doublet detection pipeline works
+2. Adaped the random based method of scDblFinder to the workflow
+
+# To Dos 
+
+1. Adapt the [scDblFinder clustering based method](https://github.com/KurayiChawatama/scdownstream/blob/dev/modules/local/doublet_detection/scDblFinder/templates/scDblFinder_clusters.R) into a module. see [this example](https://github.com/KurayiChawatama/scdownstream/blob/dev/modules/local/doublet_detection/scDblFinder/templates/scDblFinder_random.R)
+2. Adapt the random method's process into the broader pipeline creating all the necessary auxilary files
+3. Download and process (if necessary) small annotated scRNAseq datasets to use as test data
+4. Create the docker image with all the dependencies needed for the scDblFinder package to work
+5. Move on to the Mouse annotation support!
