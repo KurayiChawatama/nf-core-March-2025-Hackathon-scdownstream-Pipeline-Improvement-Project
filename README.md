@@ -220,5 +220,7 @@ Here’s a breakdown of **what you can do to contribute**, based on your interes
 3. 📥 Download and process (if necessary) **small annotated scRNAseq datasets** to use as test data
 4. 🛠️ Create the docker image with all the dependencies needed for the **scDblFinder** package to work
 5. 🐭 Move on to the Mouse annotation support!
+6. 👯 Remove the detected doublets!
+7. 🐍 Remove `#still bioconda` comment from enviment tmux!
 
 Let's keep up the momentum! 💪🔥
