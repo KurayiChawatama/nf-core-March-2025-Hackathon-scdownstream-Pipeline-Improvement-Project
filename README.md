@@ -132,7 +132,7 @@ tmux kill-session -t rstudio_session
 
 - [KurayiChawatama](https://github.com/KurayiChawatama) – Kurayi Chawatama  
 - [bogrum](https://github.com/bogrum) – Emre Taha Çevik
-- 
+
 **see the [hackathon website](https://nf-co.re/events/2025/hackathon-march-2025#projects) for our slack contact information**
   
 Contributors of all experience levels are welcome! Whether you're comfortable with R/Python scRNA-seq analysis or just starting out—there’s a place for you.
