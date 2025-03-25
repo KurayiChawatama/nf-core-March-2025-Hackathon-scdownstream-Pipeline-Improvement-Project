@@ -1,7 +1,7 @@
 #!/usr/bin/env nextflow
 
 process scDblFinder_random {
-    tag "$task.name"
+    tag "$prefix"
     label 'process_medium'
 
     // Specify the conda environment
@@ -17,22 +17,30 @@ process scDblFinder_random {
     val prefix // Input prefix value
 
     output:
-    path "${prefix}.rds" // Output RDS file
-    path "${prefix}.csv" // Output predictions CSV file
+    path "${prefix}.rds", emit: predictions // Output RDS file
+    path "${prefix}.csv", emit: rds // Output predictions CSV file
     path "versions.yml", emit: versions // Output the versions file
+
+    def template = "${moduleDir}/scDblFinder_random.R"
 
     script:
     """
-    Rscript "${moduleDir}/scDblFinder_random.R" \\
+    Rscript "${template}" \\
         --rds ${rds} \\
         --prefix ${prefix}
     """
+
 }
+
+// pipeline parameters
+params.moduleDir = './test_scDbl_Finder_random'
+params.rds = "test-datasets/test__Dbl_sce.rds"
+params.prefix = "test_Dbl_random"
 
 workflow {
     // Define the input channels
-    ch_rds = Channel.fromPath('./test-datasets/test__Dbl_sce.rds')
-    ch_prefix = Channel.value("test__Dbl")
+    ch_rds = Channel.fromPath(params.rds)
+    ch_prefix = Channel.value(params.prefix)
 
     // Run the scDblFinder_random process
     scDblFinder_random(ch_rds, ch_prefix)
