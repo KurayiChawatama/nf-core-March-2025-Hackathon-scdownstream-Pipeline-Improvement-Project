@@ -1,0 +1,10 @@
+name: scDblFinder
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - bioconda::bioconductor-scdblfinder=1.20.2
+  - bioconda::bioconductor-singlecellexperiment=1.28.0
+  - conda-forge::r-tidyverse=2.0.0 
+  - bioconda::bioconductor-biocparallel=1.40.0  # still bioconda

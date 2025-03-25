@@ -1,0 +1,4 @@
+2025-03-25 12:35:02	3.8s	determined_wing	ERR	21ac705605bcf0866e40b4895ae094e9	e3fae0f6-919a-4302-afdf-aa254ec9781d	nextflow run test_scDbl_Finder_random/test_scdblfinder_random.nf -c test_scDbl_Finder_random/test.config
+2025-03-25 12:38:05	-	furious_raman	-	f50695f49cbc3ce9fb12d5763642cd37	29e13e31-3607-45c2-982f-2d06fa9aee77	nextflow run test_scDbl_Finder_random/test_scdblfinder_random.nf -c test_scDbl_Finder_random/test.config
+2025-03-25 12:42:25	3.5s	cheesy_minsky	ERR	ccf352ef284a8b3b5b50b60b4f3b90f1	79a224e2-3bdb-4fc8-85ac-e0c01da19efe	nextflow run test_scDbl_Finder_random/test_scdblfinder_random.nf -c test_scDbl_Finder_random/test.config
+2025-03-25 12:47:17	3.5s	exotic_sanger	ERR	8ad2005289f99a0f2d498351341f5e56	98f6db8c-b5fc-4d2e-a0e4-2ab669ed61c5	nextflow run test_scDbl_Finder_random/test_scdblfinder_random.nf -c test_scDbl_Finder_random/test.config

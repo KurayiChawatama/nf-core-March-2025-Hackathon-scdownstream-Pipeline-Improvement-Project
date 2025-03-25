@@ -1,0 +1,207 @@
+Mar-25 12:38:02.564 [main] DEBUG nextflow.cli.Launcher - $> nextflow run test_scDbl_Finder_random/test_scdblfinder_random.nf -c test_scDbl_Finder_random/test.config
+Mar-25 12:38:02.817 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 24.10.5
+Mar-25 12:38:02.901 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/issamonopoly/.nextflow/plugins; core-plugins: nf-amazon@2.9.2,nf-azure@1.10.2,nf-cloudcache@0.4.2,nf-codecommit@0.2.2,nf-console@1.1.4,nf-google@1.15.4,nf-tower@1.9.3,nf-wave@1.7.4
+Mar-25 12:38:02.998 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Mar-25 12:38:03.000 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Mar-25 12:38:03.007 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+Mar-25 12:38:03.056 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Mar-25 12:38:03.201 [main] DEBUG nextflow.config.ConfigBuilder - User config file: /home/issamonopoly/Nextflow Projects/nf-core-March-2025-Hackathon-scdownstream-Pipeline-Improvement-Project/Kurayi_tests/test_scDbl_Finder_random/test.config
+Mar-25 12:38:03.209 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/issamonopoly/Nextflow Projects/nf-core-March-2025-Hackathon-scdownstream-Pipeline-Improvement-Project/Kurayi_tests/test_scDbl_Finder_random/test.config
+Mar-25 12:38:03.360 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/issamonopoly/.nextflow/secrets/store.json
+Mar-25 12:38:03.373 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@5bdaf2ce] - activable => nextflow.secret.LocalSecretsProvider@5bdaf2ce
+Mar-25 12:38:03.405 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Mar-25 12:38:04.877 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 by global default
+Mar-25 12:38:04.934 [main] DEBUG nextflow.cli.CmdRun - Launching `test_scDbl_Finder_random/test_scdblfinder_random.nf` [furious_raman] DSL2 - revision: f50695f49c
+Mar-25 12:38:04.948 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Mar-25 12:38:04.951 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Mar-25 12:38:05.126 [main] DEBUG nextflow.Session - Session UUID: 29e13e31-3607-45c2-982f-2d06fa9aee77
+Mar-25 12:38:05.129 [main] DEBUG nextflow.Session - Run name: furious_raman
+Mar-25 12:38:05.131 [main] DEBUG nextflow.Session - Executor pool size: 4
+Mar-25 12:38:05.181 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Mar-25 12:38:05.302 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=12; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Mar-25 12:38:05.454 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 24.10.5 build 5935
+  Created: 04-03-2025 17:55 UTC (20:55 TRST)
+  System: Linux 6.8.0-55-generic
+  Runtime: Groovy 4.0.23 on OpenJDK 64-Bit Server VM 17.0.13-internal+0-adhoc..src
+  Encoding: UTF-8 (UTF-8)
+  Process: 72108@Issamonopoly-LNX [127.0.1.1]
+  CPUs: 4 - Mem: 15.5 GB (1.8 GB) - Swap: 12 GB (10.8 GB)
+Mar-25 12:38:05.552 [main] DEBUG nextflow.file.FileHelper - Can't check if specified path is NFS (1): /home/issamonopoly/Nextflow Projects/nf-core-March-2025-Hackathon-scdownstream-Pipeline-Improvement-Project/Kurayi_tests/work
+
+Mar-25 12:38:05.555 [main] DEBUG nextflow.Session - Work-dir: /home/issamonopoly/Nextflow Projects/nf-core-March-2025-Hackathon-scdownstream-Pipeline-Improvement-Project/Kurayi_tests/work [null]
+Mar-25 12:38:05.560 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /home/issamonopoly/Nextflow Projects/nf-core-March-2025-Hackathon-scdownstream-Pipeline-Improvement-Project/Kurayi_tests/test_scDbl_Finder_random/bin
+Mar-25 12:38:05.595 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Mar-25 12:38:05.619 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Mar-25 12:38:05.733 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Mar-25 12:38:05.757 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 5; maxThreads: 1000
+Mar-25 12:38:05.907 [main] DEBUG nextflow.Session - Session start
+Mar-25 12:38:07.314 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Mar-25 12:38:07.829 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_af5e23c06999bc80: /home/issamonopoly/Nextflow Projects/nf-core-March-2025-Hackathon-scdownstream-Pipeline-Improvement-Project/Kurayi_tests/test_scDbl_Finder_random/test_scdblfinder_random.nf
+Mar-25 12:38:07.830 [main] DEBUG nextflow.Session - Session aborted -- Cause: Unqualified input value declaration is not allowed - replace `tuple meta,..` with `tuple val(meta),..`
+Mar-25 12:38:07.891 [main] DEBUG nextflow.Session - The following nodes are still active:
+  [operator] map
+
+Mar-25 12:38:07.897 [main] DEBUG nextflow.Session - 
+Thread[Thread-1,5,main]
+  java.base@17.0.13-internal/jdk.internal.misc.Unsafe.park(Native Method)
+  java.base@17.0.13-internal/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+  java.base@17.0.13-internal/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1679)
+  java.base@17.0.13-internal/java.util.concurrent.LinkedBlockingDeque.pollFirst(LinkedBlockingDeque.java:515)
+  java.base@17.0.13-internal/java.util.concurrent.LinkedBlockingDeque.poll(LinkedBlockingDeque.java:677)
+  app//nextflow.util.SimpleAgent.run(SimpleAgent.groovy:89)
+  java.base@17.0.13-internal/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  java.base@17.0.13-internal/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+  java.base@17.0.13-internal/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.base@17.0.13-internal/java.lang.reflect.Method.invoke(Method.java:569)
+  app//org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+  app//groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+  app//groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1333)
+  app//groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1088)
+  app//groovy.lang.MetaClassImpl.invokeMethodClosure(MetaClassImpl.java:1017)
+  app//groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1207)
+  app//groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1088)
+  app//groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+  app//groovy.lang.Closure.call(Closure.java:433)
+  app//groovy.lang.Closure.call(Closure.java:412)
+  app//groovy.lang.Closure.run(Closure.java:505)
+  java.base@17.0.13-internal/java.lang.Thread.run(Thread.java:840)
+
+Thread[AnsiLogObserver,5,main]
+  java.base@17.0.13-internal/java.lang.Object.wait(Native Method)
+  app//nextflow.trace.AnsiLogObserver.render0(AnsiLogObserver.groovy:185)
+  java.base@17.0.13-internal/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  java.base@17.0.13-internal/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+  java.base@17.0.13-internal/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.base@17.0.13-internal/java.lang.reflect.Method.invoke(Method.java:569)
+  app//org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+  app//groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+  app//groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1333)
+  app//groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1088)
+  app//groovy.lang.MetaClassImpl.invokeMethodClosure(MetaClassImpl.java:1017)
+  app//groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1207)
+  app//groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1088)
+  app//groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+  app//groovy.lang.Closure.call(Closure.java:433)
+  app//groovy.lang.Closure.call(Closure.java:412)
+  app//groovy.lang.Closure.run(Closure.java:505)
+  java.base@17.0.13-internal/java.lang.Thread.run(Thread.java:840)
+
+Thread[Actor Thread 1,5,main]
+  java.base@17.0.13-internal/jdk.internal.misc.Unsafe.park(Native Method)
+  java.base@17.0.13-internal/java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
+  java.base@17.0.13-internal/java.util.concurrent.SynchronousQueue$TransferStack$SNode.block(SynchronousQueue.java:288)
+  java.base@17.0.13-internal/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3465)
+  java.base@17.0.13-internal/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3436)
+  java.base@17.0.13-internal/java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:397)
+  java.base@17.0.13-internal/java.util.concurrent.SynchronousQueue.take(SynchronousQueue.java:886)
+  java.base@17.0.13-internal/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+  java.base@17.0.13-internal/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+  java.base@17.0.13-internal/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+  java.base@17.0.13-internal/java.lang.Thread.run(Thread.java:840)
+
+Thread[Common-Cleaner,8,InnocuousThreadGroup]
+  java.base@17.0.13-internal/java.lang.Object.wait(Native Method)
+  java.base@17.0.13-internal/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+  java.base@17.0.13-internal/jdk.internal.ref.CleanerImpl.run(CleanerImpl.java:140)
+  java.base@17.0.13-internal/java.lang.Thread.run(Thread.java:840)
+  java.base@17.0.13-internal/jdk.internal.misc.InnocuousThread.run(InnocuousThread.java:162)
+
+Thread[Reference Handler,10,system]
+  java.base@17.0.13-internal/java.lang.ref.Reference.waitForReferencePendingList(Native Method)
+  java.base@17.0.13-internal/java.lang.ref.Reference.processPendingReferences(Reference.java:253)
+  java.base@17.0.13-internal/java.lang.ref.Reference$ReferenceHandler.run(Reference.java:215)
+
+Thread[Signal Dispatcher,9,system]
+
+Thread[Finalizer,8,system]
+  java.base@17.0.13-internal/java.lang.Object.wait(Native Method)
+  java.base@17.0.13-internal/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+  java.base@17.0.13-internal/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:176)
+  java.base@17.0.13-internal/java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:172)
+
+Thread[Notification Thread,9,system]
+
+Thread[main,5,main]
+  java.base@17.0.13-internal/java.lang.Thread.dumpThreads(Native Method)
+  java.base@17.0.13-internal/java.lang.Thread.getAllStackTraces(Thread.java:1671)
+  app//nextflow.util.SysHelper.dumpThreads(SysHelper.groovy:188)
+  app//nextflow.Session.abort(Session.groovy:800)
+  app//nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:149)
+  app//nextflow.cli.CmdRun.run(CmdRun.groovy:376)
+  app//nextflow.cli.Launcher.run(Launcher.groovy:503)
+  app//nextflow.cli.Launcher.main(Launcher.groovy:658)
+
+Thread[process reaper,10,system]
+  java.base@17.0.13-internal/jdk.internal.misc.Unsafe.park(Native Method)
+  java.base@17.0.13-internal/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+  java.base@17.0.13-internal/java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:401)
+  java.base@17.0.13-internal/java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:903)
+  java.base@17.0.13-internal/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1061)
+  java.base@17.0.13-internal/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+  java.base@17.0.13-internal/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+  java.base@17.0.13-internal/java.lang.Thread.run(Thread.java:840)
+
+Mar-25 12:38:07.909 [main] ERROR nextflow.cli.Launcher - Unqualified input value declaration is not allowed - replace `tuple meta,..` with `tuple val(meta),..`
+java.lang.IllegalArgumentException: Unqualified input value declaration is not allowed - replace `tuple meta,..` with `tuple val(meta),..`
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at nextflow.script.params.TupleInParam.bind(TupleInParam.groovy:59)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at nextflow.script.ProcessConfig._in_tuple(ProcessConfig.groovy:558)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:342)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at Script_af5e23c06999bc80$_runScript_closure1.doCall(Script_af5e23c06999bc80:14)
+	at Script_af5e23c06999bc80$_runScript_closure1.doCall(Script_af5e23c06999bc80)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:279)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+	at groovy.lang.Closure.call(Closure.java:433)
+	at groovy.lang.Closure.call(Closure.java:412)
+	at nextflow.script.ProcessDef.initialize(ProcessDef.groovy:110)
+	at nextflow.script.ProcessDef.run(ProcessDef.groovy:168)
+	at nextflow.script.BindableDef.invoke_a(BindableDef.groovy:51)
+	at nextflow.script.ComponentDef.invoke_o(ComponentDef.groovy:40)
+	at nextflow.script.WorkflowBinding.invokeMethod(WorkflowBinding.groovy:103)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokePogoMethod(InvokerHelper.java:651)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokeMethod(InvokerHelper.java:628)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeOnDelegationObjects(ClosureMetaClass.java:391)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:330)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at Script_af5e23c06999bc80$_runScript_closure2$_closure7.doCall(Script_af5e23c06999bc80:31)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:279)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+	at groovy.lang.Closure.call(Closure.java:433)
+	at groovy.lang.Closure.call(Closure.java:412)
+	at nextflow.script.WorkflowDef.run0(WorkflowDef.groovy:204)
+	at nextflow.script.WorkflowDef.run(WorkflowDef.groovy:188)
+	at nextflow.script.BindableDef.invoke_a(BindableDef.groovy:51)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at nextflow.script.BaseScript.run0(BaseScript.groovy:198)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at nextflow.script.BaseScript.run(BaseScript.groovy:209)
+	at nextflow.script.ScriptParser.runScript(ScriptParser.groovy:236)
+	at nextflow.script.ScriptRunner.run(ScriptRunner.groovy:243)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:138)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:376)
+	at nextflow.cli.Launcher.run(Launcher.groovy:503)
+	at nextflow.cli.Launcher.main(Launcher.groovy:658)
