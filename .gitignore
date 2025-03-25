@@ -2,3 +2,9 @@
 .nextflow/
 work/
 .nextflow.log*
+
+# Ignore Nextflow hidden files and directories in Kurayi_tests
+Kurayi_tests/**/.nextflow/
+Kurayi_tests/**/work/
+Kurayi_tests/**/.nextflow.log*
+Kurayi_tests/**/.nextflow.log
