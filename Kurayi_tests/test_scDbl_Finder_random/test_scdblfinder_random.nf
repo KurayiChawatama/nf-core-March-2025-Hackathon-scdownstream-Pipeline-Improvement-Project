@@ -1,3 +1,5 @@
+#!/usr/bin/env nextflow
+
 process scDblFinder_random {
     tag "$task.name"
     label 'process_medium'
