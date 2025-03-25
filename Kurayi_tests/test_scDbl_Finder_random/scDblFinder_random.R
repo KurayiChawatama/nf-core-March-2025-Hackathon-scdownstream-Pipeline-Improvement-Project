@@ -1,15 +1,25 @@
 #!/usr/bin/env Rscript
 
+library(optparse)
+
+# Define arguments
+option_list <- list(
+  make_option("--rds", type="character", help="Input RDS file"),
+  make_option("--prefix", type="character", help="Output prefix")
+)
+opt <- parse_args(OptionParser(option_list=option_list))
+
+# Load libraries
 library(scDblFinder)
 library(tidyverse)
 library(SingleCellExperiment)
 library(BiocParallel)
 
-sce <- readRDS("${rds}")
+# Read the SCE object from the RDS file
+sce <- readRDS(opt$rds)
 
 # Set the param to a specified RNG seed for reproducibility
 bp <- MulticoreParam(workers = multicoreWorkers(), RNGseed=123)
-
 
 # 10 Genomics Doublet Rate calculator used to get multiplet rate if not provided
 # 10X multiplet rate table(https://rpubs.com/kenneditodd/doublet_finder_example)
@@ -35,7 +45,7 @@ print(paste("Setting multiplet rate to", multiplet_rate))
 sce <- mockDoubletSCE(dbl.rate=multiplet_rate, ngenes=500)
 
 # Run scDblFinder
-sce <- scDblFinder(GetAssayData(sce, slot = "counts"),
+sce <- scDblFinder(assay(sce, "counts"),
                    BPPARAM = bp,
                    dbr = multiplet_rate,
                    artificialDoublets = ncol(sce))
@@ -54,11 +64,11 @@ for (i in seq_along(scdbl_cols)) {
 }
 
 # Save the SCE object
-saveRDS(sce, "${prefix}.rds")
+saveRDS(sce, paste0(opt$prefix, ".rds"))
 
 # Save predictions to CSV
 predictions <- colData(sce)[, new_scdbl_cols]
-write.csv(predictions, "${prefix}.csv")
+write.csv(predictions, paste0(opt$prefix, ".csv"))
 
 ################################################
 ################################################

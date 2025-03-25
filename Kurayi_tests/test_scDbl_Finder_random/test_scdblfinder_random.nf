@@ -14,21 +14,27 @@ process scDblFinder_random {
 
     input:
     path rds // Input RDS file
+    val prefix // Input prefix value
 
     output:
-    path "*.rds", emit: rds // Output RDS file
-    path "*.csv", emit: predictions // Output predictions CSV file
+    path "${prefix}.rds" // Output RDS file
+    path "${prefix}.csv" // Output predictions CSV file
     path "versions.yml", emit: versions // Output the versions file
 
     script:
-    prefix = task.name // Set the prefix for output files
-    template "${moduleDir}/scDblFinder_random.R" // Run the R script template
+    """
+    Rscript "${moduleDir}/scDblFinder_random.R" \\
+        --rds ${rds} \\
+        --prefix ${prefix}
+    """
 }
 
 workflow {
-    // Define the input channel
+    // Define the input channels
     ch_rds = Channel.fromPath('./test-datasets/test__Dbl_sce.rds')
+    ch_prefix = Channel.value("test__Dbl")
 
     // Run the scDblFinder_random process
-    scDblFinder_random(ch_rds)
+    scDblFinder_random(ch_rds, ch_prefix)
 }
+
