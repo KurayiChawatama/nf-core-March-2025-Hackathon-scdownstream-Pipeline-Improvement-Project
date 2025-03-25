@@ -232,6 +232,7 @@ Here’s a breakdown of **what you can do to contribute**, based on your interes
    - finish the [intro to nextflow](https://training.nextflow.io/latest/), preferably up to **hello-modules ASAP**
    - set up their local environments as detailed [here](https://training.nextflow.io/latest/envsetup/), [here](https://nf-co.re/docs/nf-core-tools/installation) and here in this repo's [repo scdev.yml](https://github.com/KurayiChawatama/nf-core-March-2025-Hackathon-scdownstream-Pipeline-Improvement-Project/blob/main/scdev.yml) for the local conda env
    - fork the necessary repos [1](https://github.com/KurayiChawatama/nf-core-March-2025-Hackathon-scdownstream-Pipeline-Improvement-Project) and [2](https://github.com/KurayiChawatama/scdownstream)
+   - **IMPORTANT NOTE** make sure to install the nf-core, nextflow, python, yml, R and github copilot extensions etc. for vscode
 
 ---
 
