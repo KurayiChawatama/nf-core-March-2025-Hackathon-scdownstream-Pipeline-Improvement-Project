@@ -1,10 +1,10 @@
 # 🔬 nf-core March 2025 Hackathon Project: Enhancing the nf-core/scdownstream Pipeline
 
-Welcome to our nf-core hackathon March 2025 project! This repository contains collaborative work to **improve the [nf-core/scdownstream](https://github.com/nf-core/scdownstream) pipeline** by expanding tool diversity, improving support for model organisms, and enhancing user accessibility.
+Welcome to our nf-core March 2025 hackathon project! This repository focuses on enhancing the [nf-core/scdownstream](https://github.com/nf-core/scdownstream) pipeline by integrating diverse tools, expanding support for model organisms, and improving user accessibility. Development will continue beyond the hackathon.
 
 ## Important Note
 
-**This repo is for project coordination only!**
+**This repo is for project coordination and running standalone module tests only!**
 
 🔧 **Code contributions happen here: [scdownstream fork](https://github.com/KurayiChawatama/scdownstream)**
 
@@ -128,10 +128,9 @@ tmux kill-session -t rstudio_session
 
 ## 👥 Project Contributors
 
-### Group Leaders
-
-- [KurayiChawatama](https://github.com/KurayiChawatama) – Kurayi Chawatama  
-- [bogrum](https://github.com/bogrum) – Emre Taha Çevik
+- [KurayiChawatama](https://github.com/KurayiChawatama)
+- [Furkan Emre Bora](https://github.com/femrebora)
+- [Emre Taha Çevik](https://github.com/bogrum)
 
 **see the [hackathon website](https://nf-co.re/events/2025/hackathon-march-2025#projects) for our slack contact information**
   
@@ -213,32 +212,31 @@ Here’s a breakdown of **what you can do to contribute**, based on your interes
 - **Docker** for reproducibility.
 - **Markdown** for documentation.
 
-# 🚀 Day 1 Report
+## 🚀 Hackathon End Report
 
-## ✅ What we got done
+### ✅ What we got done
 
-1. 🧐 Figured out how the doublet detection pipeline works
-2. Adapted the random based method of scDblFinder to the workflow
-
-## To Dos
-
-### High Priority/Easy Small Tasks
-
-1. Adapt the [scDblFinder clustering based method](https://github.com/KurayiChawatama/scdownstream/blob/dev/modules/local/doublet_detection/scDblFinder/templates/scDblFinder_clusters.R) into a module. See [this example](https://github.com/KurayiChawatama/scdownstream/blob/dev/modules/local/doublet_detection/scDblFinder/templates/scDblFinder_random.R)
-2. Adapt the random method's process into the broader pipeline creating all the necessary auxiliary files as per the [contribution guidelines](https://nf-co.re/docs/tutorials/contributing_to_nf-core/contributing_to_pipelines)
-3. Create the docker image with all the dependencies([see the scDblFinder environment.yml](https://github.com/KurayiChawatama/scdownstream/blob/dev/modules/local/doublet_detection/scDblFinder/environment.yml)) needed for the scDblFinder package to work using [this site](https://seqera.io/containers/). **Make sure it contains a specific version of R and python(3.12) for reproducibility**
-4. Remove `#still bioconda` comment from environment yml
-5. Newer team members should:
+1. 🧐 Figured out how the overall pipeline works
+2. Adapted the random based method of scDblFinder to run with Nextflow
+3. Adapted this into it's own standalone pipeline for testing
+4. Downloaded and processed a small annotated scRNAseq datasets to use as test data
+5. Newer team members had to:
    - finish the [intro to nextflow](https://training.nextflow.io/latest/), preferably up to **hello-modules ASAP**
    - set up their local environments as detailed [here](https://training.nextflow.io/latest/envsetup/), [here](https://nf-co.re/docs/nf-core-tools/installation) and here in this repo's [repo scdev.yml](https://github.com/KurayiChawatama/nf-core-March-2025-Hackathon-scdownstream-Pipeline-Improvement-Project/blob/main/scdev.yml) for the local conda env
    - fork the necessary repos [1](https://github.com/KurayiChawatama/nf-core-March-2025-Hackathon-scdownstream-Pipeline-Improvement-Project) and [2](https://github.com/KurayiChawatama/scdownstream)
    - **IMPORTANT NOTE** make sure to install the nf-core, nextflow, python, yml, R and github copilot extensions etc. for vscode
 
----
+### 📃 Still To Dos
 
-### Lower Priority Tasks
 
-1. Download and process (if necessary) small annotated scRNAseq datasets to use as test data
-2. Add the other contributors to this readme and check it for syntax errors
-3. Move on to the Mouse annotation support!
-4. Move on to Adapt the pipeline 's doublet removal modules to work with the detected doublets
+1. Adapt the [scDblFinder clustering based method](https://github.com/KurayiChawatama/scdownstream/blob/dev/modules/local/doublet_detection/scDblFinder/templates/scDblFinder_clusters.R) into a module. See [this example](https://github.com/KurayiChawatama/scdownstream/blob/dev/modules/local/doublet_detection/scDblFinder/templates/scDblFinder_random.R)
+2. Adapt the random method's process into the broader pipeline creating all the necessary auxiliary files as per the [contribution guidelines](https://nf-co.re/docs/tutorials/contributing_to_nf-core/contributing_to_pipelines) and to use the [script:template format](https://www.nextflow.io/docs/latest/process.html)
+3. Create the docker image with all the dependencies([see the scDblFinder environment.yml](https://github.com/KurayiChawatama/scdownstream/blob/dev/modules/local/doublet_detection/scDblFinder/environment.yml)) needed for the scDblFinder package to work using [this site](https://seqera.io/containers/). **Make sure it contains a specific version of R and python(3.12) for reproducibility**
+4. Remove `#still bioconda` comment from environment yml
+5. Download and processed a different annotated scRNAseq datasets to use as test data to confirm it doesn't call all singlets as in previous test
+6. Research other sequencing platforms, the module is currently 10x Chromium specific (see multiplate rate calculation step)
+7. Check if the pipeline as a whole handles inputs as Suerat object conversion automatically
+8. Get a forked then locally cloned version of the pipeline to run locally
+9. Move on to adding the Mouse annotation support!
+10. Move on to Adapt the pipeline 's doublet removal modules to work with the detected doublets
+

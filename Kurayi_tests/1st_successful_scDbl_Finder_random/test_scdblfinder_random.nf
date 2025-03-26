@@ -21,10 +21,15 @@ process scDblFinder_random {
     path "${prefix}.csv", emit: rds // Output predictions CSV file
     path "versions.yml", emit: versions // Output the versions file
 
+    def template = "${moduleDir}/scDblFinder_random.R"
+
     script:
-    prefix = task.ext.prefix ?: "${prefix}"
-    rds = task.ext.rds ?: "${rds}"
-    template 'scDblFinder_random.R'
+    """
+    Rscript "${template}" \\
+        --rds ${rds} \\
+        --prefix ${prefix}
+    """
+
 }
 
 // pipeline parameters
