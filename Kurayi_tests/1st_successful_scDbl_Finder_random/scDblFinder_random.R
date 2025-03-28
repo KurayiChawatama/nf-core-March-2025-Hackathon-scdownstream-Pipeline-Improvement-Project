@@ -1,25 +1,29 @@
 #!/usr/bin/env Rscript
 
-library(optparse)
-
-# Define arguments
-option_list <- list(
-  make_option("--rds", type="character", help="Input RDS file"),
-  make_option("--prefix", type="character", help="Output prefix")
-)
-opt <- parse_args(OptionParser(option_list=option_list))
+# Set a global RNG seed for reproducibility
+set.seed(123)
 
 # Load libraries
+library(optparse) # used for command line arguments
 library(scDblFinder)
 library(tidyverse)
 library(SingleCellExperiment)
 library(BiocParallel)
 
+# Define arguments
+option_list <- list(
+  make_option("--rds", type="character", help="Input RDS file"),
+  make_option("--prefix", type="character", help="Output prefix"),
+  make_option("--cpus", type="integer", help="Number of CPUs to use")
+)
+# Parse arguments
+opt <- parse_args(OptionParser(option_list=option_list))
+
 # Read the SCE object from the RDS file
 sce <- readRDS(opt$rds)
 
 # Set the param to a specified RNG seed for reproducibility
-bp <- MulticoreParam(workers = multicoreWorkers(), RNGseed=123)
+bp <- MulticoreParam(workers = opt$cpus, RNGseed = 123)
 
 # 10 Genomics Doublet Rate calculator used to get multiplet rate if not provided
 # 10X multiplet rate table(https://rpubs.com/kenneditodd/doublet_finder_example)
