@@ -22,9 +22,7 @@ process scDblFinder_random {
     path "versions.yml", emit: versions // Output the versions file
 
     script:
-    prefix = task.ext.prefix ?: "${prefix}"
-    rds = task.ext.rds ?: "${rds}"
-    template 'scDblFinder_random.R'
+    template 'scDblFinder_random.R', rds: rds, prefix: prefix
 }
 
 // pipeline parameters

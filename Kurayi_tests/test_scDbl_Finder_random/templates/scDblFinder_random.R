@@ -6,10 +6,10 @@ prefix <- "${prefix}"
 
 # Load libraries
 suppressPackageStartupMessages({
-    library(scDblFinder)
-    library(tidyverse)
-    library(SingleCellExperiment)
-    library(BiocParallel)
+  library(scDblFinder)
+  library(tidyverse)
+  library(SingleCellExperiment)
+  library(BiocParallel)
 })
 
 # Set the param to a specified RNG seed for reproducibility

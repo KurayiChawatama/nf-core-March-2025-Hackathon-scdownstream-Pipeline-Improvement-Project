@@ -4,11 +4,13 @@
 set.seed(123)
 
 # Load libraries
-library(optparse) # used for command line arguments
-library(scDblFinder)
-library(tidyverse)
-library(SingleCellExperiment)
-library(BiocParallel)
+suppressPackageStartupMessages({
+  library(optparse) # used for command line arguments
+  library(scDblFinder)
+  library(tidyverse)
+  library(SingleCellExperiment)
+  library(BiocParallel)
+})
 
 # Define arguments
 option_list <- list(
