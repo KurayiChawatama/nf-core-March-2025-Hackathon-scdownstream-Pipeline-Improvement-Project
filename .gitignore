@@ -8,3 +8,6 @@ Kurayi_tests/**/.nextflow/
 Kurayi_tests/**/work/
 Kurayi_tests/**/.nextflow.log*
 Kurayi_tests/**/.nextflow.log
+
+# Ignore the vs code workspace file
+nf-core-March-2025-Hackathon-scdownstream-Pipeline-Improvement-Project.code-workspace
