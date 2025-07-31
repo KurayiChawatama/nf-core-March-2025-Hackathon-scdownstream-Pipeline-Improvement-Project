@@ -11,3 +11,6 @@ Kurayi_tests/**/.nextflow.log
 
 # Ignore the vs code workspace file
 nf-core-March-2025-Hackathon-scdownstream-Pipeline-Improvement-Project.code-workspace
+
+#  Ignore R History
+Kurayi_tests/test_scDbl_Finder_random/templates/.Rhistory
